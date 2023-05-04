@@ -1,8 +1,15 @@
 import React from "react"
-import "./App.css"
+import { Route, Switch } from "react-router-dom"
+import Card from "./components/card"
+import CreateCard from "./components/createCard"
 
 function App() {
-    return <></>
+    return (
+        <Switch>
+            <Route path={"/createCard"} component={CreateCard} />
+            <Route path={"/"} component={Card} />
+        </Switch>
+    )
 }
 
 export default App
